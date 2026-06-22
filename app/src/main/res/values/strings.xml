@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">HealthyMe – Daily Routine Manager</string>
+    <string name="home">Home</string>
+    <string name="habits">Habits</string>
+    <string name="mood">Mood</string>
+    <string name="settings">Settings</string>
+    <string name="add_habit">Add Habit</string>
+    <string name="add_mood">Add Mood</string>
+    <string name="hydrate_notification_title">Time to drink water 💧</string>
+    <string name="hydrate_notification_text">Stay hydrated — take a sip now!</string>
+    <string name="share_mood_subject">My mood summary</string>
+    <string name="widget_title">Todays Progress</string>
+</resources>

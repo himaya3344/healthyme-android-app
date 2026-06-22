@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="primary">#2D6A4F</color>
+    <color name="primaryVariant">#1B4332</color>
+    <color name="secondary">#95D5B2</color>
+    <color name="accent">#FFB703</color>
+    <color name="white">#FFFFFF</color>
+    <color name="background">#F7FFF7</color>
+    <color name="textPrimary">#1B262B</color>
+
+    <!-- Mood Colors -->
+    <color name="mood_awful">#6A0DAD</color> <!-- Purple -->
+    <color name="mood_bad">#4169E1</color> <!-- Royal Blue -->
+    <color name="mood_okay">#FFD700</color> <!-- Gold -->
+    <color name="mood_good">#90EE90</color> <!-- Light Green -->
+    <color name="mood_great">#ADFF2F</color> <!-- Green-Yellow -->
+</resources>
