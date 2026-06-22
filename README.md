@@ -1,86 +1,65 @@
 # HealthyMe – Daily Routine Manager
 
-A wellness app to help users manage daily habits, track moods, and stay hydrated.
+HealthyMe is a personal wellness tracking Android application designed to help users manage daily habits, track moods, and stay hydrated. The app encourages users to build healthier routines through habit tracking, mood journaling, hydration reminders, and a home screen widget.
 
-## Required Manifest Entries
+## Tech Stack
 
-Add these permissions and declarations to your `AndroidManifest.xml`:
-
-```xml
-<?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android">
-    <!-- Permissions -->
-    <uses-permission android:name="android.permission.SCHEDULE_EXACT_ALARM" />
-    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
-    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
-
-    <application
-        android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
-        android:label="@string/app_name"
-        android:theme="@style/Theme.HealthyMe">
-
-        <!-- MainActivity -->
-        <activity
-            android:name=".MainActivity"
-            android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
-
-        <!-- Widget Provider -->
-        <receiver
-            android:name=".widget.HabitWidgetProvider"
-            android:exported="false">
-            <intent-filter>
-                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
-                <action android:name="com.example.healthyme.action.UPDATE_WIDGET" />
-            </intent-filter>
-            <meta-data
-                android:name="android.appwidget.provider"
-                android:resource="@xml/habit_widget_info" />
-        </receiver>
-
-        <!-- Hydration Alarm Receiver -->
-        <receiver
-            android:name=".utils.HydrationAlarmReceiver"
-            android:exported="false">
-            <intent-filter>
-                <action android:name="com.example.healthyme.action.HYDRATION_ALARM" />
-            </intent-filter>
-        </receiver>
-
-    </application>
-</manifest>
-```
+* Android Studio
+* Kotlin
+* XML Layouts
+* SharedPreferences
+* Material Design Components
 
 ## Features
 
-1. **Daily Habit Tracker**
-   - Add/edit/delete habits
-   - Mark habits as complete
-   - Progress tracking on home screen and widget
+### Daily Habit Tracker
 
-2. **Mood Journal**
-   - Log moods with emoji and notes
-   - Share mood entries
-   - Chronological mood history
+* Add, edit, and delete daily habits
+* Mark habits as complete
+* View progress on the home screen
+* Track daily routine consistency
 
-3. **Hydration Reminders**
-   - Customizable reminder interval
-   - Notification with direct app launch
-   - Uses AlarmManager for reliable scheduling
+### Mood Journal
 
-4. **Home Screen Widget**
-   - Shows today's habit completion percentage
-   - Updates automatically when habits are marked complete
-   - Tappable to open app
+* Log moods using emojis and notes
+* View mood history in chronological order
+* Share mood entries
 
-## Implementation Notes
+### Hydration Reminders
 
-- Uses SharedPreferences to store habits and moods as JSON
-- Material Design components for clean UI
-- MVVM-ish architecture with data models and adapters
-- Fragment-based navigation with BottomNavigationView
+* Set customizable hydration reminder intervals
+* Receive notification reminders
+* Open the app directly from notifications
+* Uses AlarmManager for reliable scheduling
+
+### Home Screen Widget
+
+* Displays today’s habit completion percentage
+* Updates when habits are marked complete
+* Opens the app when tapped
+
+## Implementation Details
+
+* Uses SharedPreferences to store habits and moods as JSON
+* Uses Fragment-based navigation with BottomNavigationView
+* Uses Material Design components for a clean mobile UI
+* Includes Android notification and alarm scheduling features
+* Includes a home screen widget for quick habit progress tracking
+
+## Required Android Permissions
+
+The app uses the following permissions:
+
+```xml
+<uses-permission android:name="android.permission.SCHEDULE_EXACT_ALARM" />
+<uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+<uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+```
+
+## Project Purpose
+
+This project was developed to practice Android mobile application development using Kotlin while focusing on a real-life wellness problem. The goal is to help users become more mindful of their daily habits, emotional well-being, and hydration routines.
+
+## Author
+
+Himaya Rathnayaka
